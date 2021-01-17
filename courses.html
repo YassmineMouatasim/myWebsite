@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Plate-forme d'Enseignement à Distance de ENS Tetouan</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-theme.css" media="screen">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo.jpeg" height="80px">
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right mainNav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="active"><a href="courses.html">Courses</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <header id="head" class="secondary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <h1>Courses</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="courses">
+        <section class="container">
+            <h2>les suites numériques</h2>
+
+        </section>
+<h2>1. Introduction</h2><br/>
+<p>
+L'expérience indique que l'étude abstraite des structures algébriques peut se révéler fascinante ou épuisante selon la personnalité de chacun. Un inconvénient, peut-être inévitable, de cette étude est qu'il est difficile de mettre immédiatement en relief l'utilité des résultats démontrés ; il faut passer un certain temps dans la théorie, puis de nouveau un certain temps dans des chapitres plus concrets où les résultats accumulés seront recyclés.
+</p>
+ 
+<p>
+Tentons cependant de rassurer le lecteur grâce à la constatation suivante (à moins que cette constatation ne l'effraie encore plus) : une bonne part des résultats énoncés sur les groupes finis (concept d'ordre, théorème de Lagrange, etc.) aura l'occasion d'être mise en application dès le chapitre d'arithmétique. En effet, une première utilité de la théorie des groupes est de formaliser et systématiser les calculs usuels qu'on sait pratiquer sur les ensembles de nombres.
+</p>
+ 
+<p>
+L'autre point de vue sur lequel on peut insister est celui des groupes formés de bijections, mais malheureusement on aura peu l'occasion de les voir vraiment appliqués dans la suite de ce cours de première année. En revanche, on peut affirmer que des connaissances sur les groupes de permutations (groupes de bijections des ensembles finis) sont bien utiles de ci de là, en informatique par exemple. Et de toutes façons l'investissement sera rentabilisé dès que le lecteur apprendra plus de géométrie, ce qui reste un cadre idéal d'usage des groupes de transformations.
+</p>
+ 
+<h2>2. Relations</h2>
+ 
+<p>
+Vous avez déjà rencontré cette notion dans votre cursus ; rappelons qu'intuitivement, une relation sur un ensemble E  est la description de liens entre certains éléments de E  .
+</p>
+ 
+<b>Exemples : </b>
+<ol>
+<li>
+La relation «est inférieur ou égal à» sur l'ensemble ℝ  des réels : pour deux réels x  et y  , on peut avoir x≤y  ou non.
+</li>
+<li>
+La relation «est inclus dans» sur l'ensemble des parties d'un ensemble : pour deux parties A  et B  , on peut avoir A⊂B  ou B⊂A  ou aucun des deux.
+</li>
+ 
+<li>
+La relation «a le même cardinal que» sur l'ensemble des parties d'un ensemble fini.
+</li>
+ 
+<li>
+Plus exotique : la relation «coïncide en au moins un point avec» pour des fonctions définies sur un même ensemble.
+</li>
+</ol>
+ 
+
+<b>Définition 1 :</b>  Le graphe d'une relation ℛ  sur un ensemble E  est l'ensemble des couples (a,b)  de E*E  tels que aℛb  .
+ 
+<p>
+Attention à bien lire cette définition, qui, comme toutes ses consœurs de la suite de ce cours, peut être mal retenue par de jeunes âmes peu scrupuleuses mathématiquement parlant. Il est facile de retenir que le graphe de ℛ  a un rapport avec aℛb  . Mais soulignons que le graphe est un ensemble.
+</p>
+ 
+<p>
+Profitons en pour signaler dès l'abord que les divers objets qui sont définis dans ce cours entrent dans un petit nombre de catégories : souvent des ensembles, assez souvent des applications, souvent des n  -uplets (qui ne sont rien d'autres que des applications particulières, sauriez-vous préciser pourquoi ?), souvent aussi des nombres (entiers, réels ou autres), plus rarement des relations, etc. Il n'est pas difficile de savoir dans quelle catégorie ranger les graphes : ce ne sont manifestement pas des triplets, ni des nombres complexes ! Le plus important est de ne pas oublier de les ranger quelque part. Savoir à quelle catégorie appartient un objet permet d'éviter les bourdes les plus monumentales : ainsi, le symbole ∩  aura un sens entre deux ensembles, pas entre deux réels, et réciproquement pour le symbole +  . On profitera du fait que la première phrase de cette section contient les mots «élément» et «ensemble» pour vérifier qu'on ne confond pas les deux.
+</p>
+
+<br/>Définition 2  :  Soit E  un ensemble et ℛ  une relation sur E  .
+ 
+<ol>
+<li>La relation ℛ  est  réflexive lorsque pour tout élément a  de E  , aℛa  .</li>
+
+<li>La relation ℛ  est  symétrique lorsque pour tous éléments a  et b  de E  , si aℛb  , alors bℛa  .</li>
+
+<li>La relation ℛ  est  transitive lorsque pour tous éléments a  , b  et c  de E  , si aℛb  et si bℛc  , alors aℛc  .</li>
+
+<li>La relation ℛ  est  anti-symétrique lorsque pour tous éléments a  et b  de E  , si aℛb  et si bℛa  , alors a=b  .<li>
+</ol>
+ 
+<p>
+Quelques commentaires sur la dernière condition, qui est sans doute la plus difficile à bien mémoriser des quatre : c'est, comme son nom l'indique, en gros le contraire de la propriété de symétrie. La symétrie exige que quand deux éléments sont liés dans un sens, ils le sont aussi dans l'autre. L'anti-symétrie, c'est approximativement demander que si deux éléments sont liés dans un sens, ils ne le sont pas dans l'autre. Mais cette condition empêcherait un élément d'être lié à lui-même, ce qui ne serait pas désespérant en soi mais ne serait pas conforme à l'usage. De fait, l'usage s'est fait de compliquer la définition afin de garder la permission pour un élément d'être lié à lui-même.
+On comprendra peut-être un peu mieux la définition en écrivant la contraposée de l'implication qu'elle contient.
+</p>
+ 
+<p>
+Autre formulation de la définition de l'anti-symétrie  Une relation ℛ  sur un ensemble E  est anti-symétrique lorsque pour tous éléments a  et b  distincts de E  , on ne peut avoir simultanément aℛb  et bℛa  .
+Comme nous sommes encore débutants, faisons l'effort d'expliciter une autre façon de présenter la même notion.
+Autre formulation de la définition de l'anti-symétrie  Une relation ℛ  sur un ensemble E  est anti-symétrique lorsque pour tous éléments a  et b  distincts de E  , aℛb  est faux ou bℛa  est faux.
+Bien évidemment, ce genre de liste de formulations équivalentes n'est surtout pas à «savoir par cœur». Ce qui est par contre indispensable, c'est de se familariser avec les petites manipulations qui permettent de passer de l'une à l'autre, selon les besoins.
+</p>
+ 
+<p>
+En pratique, les relations qui pourront nous intéresser dans ce cours ne seront jamais bien compliquées ; le vocabulaire que nous avons dû ingurgiter depuis le début de ce chapitre n'a d'utilité que pour savoir reconnaître deux types très particuliers de relations : les relations d'ordre, auxquelles cette section est consacrée, puis, dans la section prochaine, les relations d'équivalence.
+</p>
+ 
+
+<br/><b>Définition 3 :</b>  Une relation est une relation d'ordre lorsqu'elle est simultanément réflexive, transitive et anti-symétrique.
+Considérons par exemple la relation «divise»sur l'ensemble E={1,2,3,4,5,6}  . C'est une relation d'ordre ; son graphe est visualisé par des flèches sur la figure 1.
+
+        <center><img src="assets/images/figure.png" width="400px;"/></center>
+
+<p>
+Intuitivement, une relation d'ordre est une relation qui peut raisonnablement être appelée «est supérieur ou égal à» ou, bien sûr, «est inférieur ou égal à».
+
+<br/><b>Exemple 2  :</b> La relation « ≤  » sur E=ℝ  est une relation d'ordre. Pour tout ensemble A  fixé, la relation « ⊂  » sur E=ℐ(A)  est une relation d'ordre. La seconde est sans doute plus compliquée à maîtriser que la première dans la mesure où deux parties de A  ne sont pas forcément comparables l'une à l'autre.
+</p>
+ 
+<p>
+Le morceau est plus sérieux pour les relations d'équivalence que pour les relations d'ordre, car on ne va pas se contenter de donner une définition, mais on va aussi voir le lien avec un autre concept. Pour expliquer intuitivement ce qui va suivre, une relation d'équivalence est une relation qui peut raisonnablement s'appeler «est de la même catégorie que» et une partition est une répartition en catégories.
+</p>
+ 
+<p>
+<br/><b>Définition 4  : </b> Une relation est une relation d'équivalence lorsqu'elle est simultanément réflexive, symétrique et transitive.
+<br/><b>Exemple 3   : </b>L'égalité sur n'importe quel ensemble E  fixé. La relation «a même parité que» sur l'ensemble ℕ  des entiers naturels. La relation «est confondue avec ou parallèle à» sur l'ensemble des droites d'un plan affine.
+</p>
+ 
+<p>
+Avalons encore trois définitions de plus en plus indigestes mais ce n'est pas gratuit, les concepts serviront plus loin, notamment en arithmétique.
+Définition 5   Soit ℛ  une relation d'équivalence sur un ensemble E  , et soit a  un élément de E  . On appelle classe d'équivalence de a  modulo ℛ  l'ensemble {x∈E|aℛx}  ,Avec des mots, la classe d'équivalence de a  est l'ensemble formé des éléments de la même catégorie que a  .
+<br/><b>Notation 1  :</b> On note cℓ_ℛ(a)  la classe d'équivalence d'un élément a  de E  pour la relation d'équivalence ℛ  .
+</p>
+ 
+<p>
+On abrège souvent cℓ_ℛ(a)  en cℓ(a)  . Une autre notation pour la classe d'équivalence de a  est å mais nous l'utiliserons rarement dans ce cours. Par contre, nous désignerons souvent les relations d'équivalence par le signe ∼  .
+<br/><b>Définition 6  : </b> Soit ∼  une relation d'équivalence sur un ensemble E  . On appelle ensemble-quotient de E  par la relation ∼  l'ensemble : {cℓ(a)|a∈E} 
+Attention tout de même ! Comme cℓ(a)  est une partie (et non un élément) de E  , l'ensemble-quotient est un ensemble de parties de E  . Ce n'est pas une partie de E  mais une partie de ℐ(E)  . Ce n'est pas si compliqué, mais il ne faut pas s'y perdre.
+<br/><b>Notation 2  : </b>L'ensemble-quotient de E  par ∼  est noté E/ ∼  .
+On remarquera qu'en général, chaque élément c  de l'ensemble quotient E/ ∼  peut s'écrire comme c=cℓ(a)  pour de nombreux éléments a  différents de E  : très précisément, c  s'écrit c=cℓ(a)  pour un élément a  de E  tel que a∈c  , et aussi c=cℓ(b)  pour tous les éléments b  de E  tels que a∼b  .
+<p>
+ 
+
+<br/><b>Définition 7 : </b> Une partition d'un ensemble E  est un ensemble Q  de parties de E  vérifiant les trois propriétés suivantes :
+<ul>
+<li>L'ensemble vide n'est pas un élément de Q  .</li>
+
+<li>Deux éléments distincts de Q  sont disjoints.</li>
+
+<li>Tout élément de E  appartient à un élément de Q  .</li>
+</ul>
+
+<p>
+C'est dur à avaler parce qu'on rentre inévitablement dans le monde des ensembles dont les éléments sont eux-mêmes des ensembles. Les éléments de Q  sont des parties de E  et doivent donc être pensés comme des groupes d'éléments de E  vérifiant une condition commune. Et Q⊂ℐ(E)  : une partition de E  est une partie de l'ensemble des parties de E  (ouf !).
+<br/><b>Exemple 4  : </b> En notant I⊂ℕ  l'ensemble des entiers impairs et P⊂ℕ  l'ensemble des entiers pairs, {I,P}  est une partition de ℕ  .
+</p>
+ 
+<p>
+Tentons maintenant de commenter les conditions de la définition defparti. La condition (i) est sans grand intérêt et juste là pour que les énoncés marchent bien. La condition (ii) nous assure qu'on n'a inscrit aucun élément de E  dans deux catégories à la fois. La condition (iii) signifie qu'on n'a oublié d'inscrire personne : tout élément de E  est dans un groupe.
+On remarquera qu'on peut regrouper les deux conditions significatives, ce qui donne l'énoncé suivant.
+</p>
+ 
+<p>
+Autre formulation de la définition d'une partition  Une partition d'un ensemble E  est un ensemble Q  de parties de E  vérifiant les deux propriétés (i) et (iv) ci-dessous :
+<ul>
+<li>L'ensemble vide n'est pas un élément de Q  .</li>
+
+<li>Tout élément de E  appartient à un et un seul élément de Q  .</li>
+</ul>
+</p>
+<p>
+<br/><b>Proposition  1 : </b> Soit ∼  une relation d'équivalence sur un ensemble E  . L'ensemble-quotient E/ ∼  est une partition de E  .
+
+ 
+
+Complément Toute partition de A  peut s'obtenir ainsi comme quotient par une relation d'équivalence de E  et cette relation d'équivalence est unique.
+La preuve du complément est laissée au lecteur.
+<br/><b>Démonstration : </b>Vérifions successivement les trois propriétés définissant une partition.
+</p>
+ 
+<p>
+Vérifions successivement les trois propriétés définissant une partition.
+Vérification de (i) : Soit A  un élément de E/ ∼  . Par définition de E/ ∼  , il existe un élément a  de E  tel que A=cℓ(a)  . Comme ∼  est réflexive, a∼a  , donc a  appartient à cℓ(a)=A  . Ainsi A  n'est pas réduit à l'ensemble vide.
+Vérification de (ii) : Soient A  et B  deux éléments de E/ ∼  . On peut trouver des éléments a  et b  de E  tels que A=cℓ(a)  et B=cℓ(b)  . On doit montrer que si A  et B  sont distincts, ils sont alors disjoints, et on va procéder par contraposition, c'est-à-dire en montrant que si A  et B  ne sont pas disjoints, ils sont égaux.
+Supposons donc A  et B  non disjoints. L'objectif est de prouver que A=B  , on va montrer successivement les inclusions A⊂B  et B⊂A  .
+</p>
+ 
+<p>
+Par l'hypothèse qu'on vient de faire, on peut prendre un élément c  de E  qui appartient simultanément à A  et à B  .
+Première inclusion : Montrons tout d'abord que A⊂B  . Pour ce faire, prenons un x∈A  quelconque et prouvons que x∈B  .
+Comme x∈A=cℓ(a)  , par définition d'une classe d'équivalence, on obtient a∼x  . Comme c∈A=cℓ(a)  , on obtient de même a∼c  , puis, grâce à la symétrie de ∼  , on obtient c∼a  . Comme c∈B=cℓ(b)  , on obtient enfin b∼c  . En mettant bout à bout les trois informations ainsi obtenues ( b∼c  , c∼a  et a∼x  ) et en jouant deux fois sur la transitivité de ∼  , on obtient alors que b∼x  , c'est-à-dire que x∈B  .Ceci prouve bien que A⊂B  .
+</p>
+ 
+<h2>3. Lois de composition et morphismes</h2>
+ 
+
+<b>Définition 8  :</b> On appelle loi de composition sur un ensemble E  une application de E*E  vers E  .
+<br/>
+ 
+<p>
+En fait, bien que cette définition soit générale, on n'aurait pas l'idée d'appeler «loi de composition» n'importe quelle application de E*E  vers E  ; le vocable n'est utilisé que quand il est naturel de noter l'application par un symbole opératoire. Des exemples typiques de lois de composition sont l'addition +  de ℝ²  vers ℝ  , qui associe x+y  à (x,y)  ; ou bien la loi de composition °  sur l'ensemble E^E  des applications de E  vers E  , qui associe l'application f°g  au couple d'applications (f,g)  . Pour des lois de composition abstraites, le symbole opératoire *  a été à la mode et nous l'utiliserons occasionnellement, surtout au début, mais nous nous contenterons rapidement de la notation multiplicative a.b  , ou même simplement ab  , pour l'élément obtenu en appliquant la loi de composition à (a,b)  .
+</p><br/>
+ 
+
+ 
+
+<b>Définition 9  : </b> Soit *  une loi de composition sur un ensemble E  .
+<br/>
+<ol>
+<li>On dit que *  est commutative lorsque pour tous éléments a  et b  de E  , a*b=b*a </li>
+
+<li>On dit que *  est associative lorsque pour tous éléments a  , b  et c  de E  , (a*b)*c=a*(b*c) </li>
+
+<li>On dit qu'un élément e  de E  est élément neutre pour *  lorsque pour tout élément a  de E  , a*e=e*a=a </li>
+</ol><br/>
+ 
+<p>
+La cohérence de ce qui suit nécessite d'énoncer tout de suite un résultat simplissime.<br/>
+<b>Proposition 2 : </b>  Une loi de composition possède au plus un élément neutre.
+Soit e_1  et e_2  deux éléments neutres pour une loi de composition *  . Comme e_2  est neutre, e_1*e_2=e_1  et comme e_1  est neutre, e_1*e_2=e_2  . Donc e_1=e_2  .
+</p><br/>
+ 
+<p>
+On parlera donc de l'élément neutre avec l'article défini, lorsqu'il existe un élément neutre.<br/>
+<b>Définition 10 : </b>  Soit *  une loi de composition sur un ensemble E  admettant un élément neutre noté e  et soit a  un élément de E  . On dit qu'un élément b  de E  est symétrique (ou inverse) de a  lorsque a*b=b*a=e 
+Là encore, glissons sans tarder une évidence.<br/>
+<b>Proposition 3 : </b>  Soit *  une loi de composition sur un ensemble E  , associative et possédant un élément neutre. Chaque élément possède au plus un symétrique.
+</p><br/>
+ 
+<p>
+Soit e  le neutre de *  , soit a  un élément de E  et soient b_1  et b_2  deux symétriques de a  . Alors d'une part (b_1*a)*b_2=e*b_2=b_2  et d'autre part b_1*(a*b_2)=b_1*e=b_1  . Par associativité de la loi de composition, (b_1*a)*b_2=b_1*(a*b_2)  , d'où b_1=b_2  .
+Les lois de composition intéressantes étant en pratique associatives, on pourra donc faire plein usage de la notation suivante.
+</p><br/>
+ 
+
+<b>Notation 3 : </b>  Le symétrique d'un élément a  est noté a^-1  .
+
+ 
+<p>
+Maintenant que nous savons manipuler une loi de composition sur un seul ensemble, apprenons à évoluer d'un ensemble muni d'une loi de composition vers un autre.</br>
+<b>Définition 11  : </b> Soit E  un ensemble muni d'une loi de composition *  et F  un ensemble muni d'une loi de composition .  . On dit qu'une application f:E→F  est un morphisme lorsque pour tous éléments a  et b  de E  , on a l'identité : f(a*b)=f(a).f(b) <br/>
+<b>Définition 12  : </b> Un morphisme bijectif est appelé un isomorphisme.
+</p><br/>
+ 
+<p>
+Il semble plus facile d'expliquer la notion d'isomorphisme que celle de morphisme en général ; deux lois de composition sur deux ensembles fourniront des structures isomorphes lorsque ces deux lois de composition agissent de la même façon, seuls les noms des éléments changeant. La phrase précédente n'étant peut-être pas si claire que cela, donnons plutôt des exemples, c'est toujours bien les exemples.
+</p><br/>
+ 
+<p>
+<b>Exemple 5  : </b> Considérons tout d'abord la bijection σ  de l'ensemble E={0,1,2,3}  définie par σ(0)=1,σ(1)=2,σ(2)=3,σ(3...  Avec à peine un peu de bon sens (tout mathématicien pense très vite à σ  comme «faisant tourner» les quatre éléments de E  ), on voit sans guère de calculs que σ°σ  est la bijection τ  de E  définie par τ(0)=2,τ(1)=3,τ(2)=0,τ(3...  puis que σ°σ°σ  est la bijection ρ  de E  définie par ρ(0)=3,ρ(1)=0,ρ(2)=1,ρ(3...  et enfin que σ°σ°σ°σ  est tout simplement l'identité de E  , que l'on note désormais e  .
+</p><br/>
+
+
+
+
+
+    </div>
+
+
+</body>
+
+</html>

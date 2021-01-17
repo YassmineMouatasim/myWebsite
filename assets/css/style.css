@@ -1,0 +1,57 @@
+	body {
+	    font-family: 'Lato', sans-serif;
+	    font-weight: normal;
+	}
+
+	#head {
+	    background: #181015 url( ../images/bg.jpeg) no-repeat;
+	    background-size: cover;
+	    min-height: 520px;
+	    text-align: center;
+	    color: white;
+	    font-weight: 400;
+	    position: relative;
+	    border-top: 1px solid #0b9ff3;
+	    background-position-x: center;
+	}
+
+	    #head.secondary {
+		height: 100px;
+		min-height: 100px;
+		padding-top: 0px;
+		height: 100px;
+	    	min-height: 100px;
+	    	background: #0b9ff3;
+	    	background-size: cover;
+	    	text-align: left;
+	    }
+
+	.navbar-inverse {
+	    background: #fff;
+	    border: none;
+	}
+
+	    .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > .open ul > a {
+		color: #797979;
+		font-size: 15px;
+		font-weight: 700;
+	    }
+
+		.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+		    background: none;
+		    color: #0b9ff3 !important;
+		}
+
+	    .navbar-inverse .navbar-nav > .active > a {
+		background: none;
+		color: #0b9ff3;
+	    }
+
+	    .navbar-inverse .navbar-nav > li > a, .navbar-inverse .navbar-nav > .open ul > a {
+		text-align: left;
+	    }
+
+
+
+
+
